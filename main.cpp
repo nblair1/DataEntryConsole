@@ -39,8 +39,9 @@ int main()
         {
             // MySQL database connect
             sql::Driver* driver = get_driver_instance();
-            sql::Connection* con = driver->connect("tcp://127.0.0.1:3039", "nvblair95", "sjjgklsjlkj");
-            con->setSchema("my_database");
+            // change each parameter to match that of your database
+            sql::Connection* con = driver->connect("tcp://127.0.0.1:3039", "yourUsername", "yourPassword");
+            con->setSchema("yourDatabase");
 
             switch (choice)
             {
@@ -353,7 +354,8 @@ int main()
                 htmlFile.close();
                 // HTML to a PDF using wkhtmltopdf
                 std::stringstream commandStream;
-                commandStream << "wkhtmltopdf.exe " << filename << ".html C:\\/Users\\/nvbla\\/Downloads\\/wkhtmltopdf\\/pdfs\\/" << filename << ".pdf";
+                // replace filename path with what matches your target
+                commandStream << "wkhtmltopdf.exe " << filename << ".html C:\\/Users\\/yourPath\\/Example\\/wkhtmltopdf\\/pdfs\\/" << filename << ".pdf";
                 int ret = std::system(commandStream.str().c_str());
                 if (ret != 0) {
                     std::cerr << "Error generating PDF. Return value: " << ret << std::endl;
