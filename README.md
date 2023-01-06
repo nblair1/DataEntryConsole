@@ -15,9 +15,9 @@ This is a .cpp program that integrates CRUD-like operations for a MySQL Database
 This project uses the MySQL C++ Connector and wkhtmltopdf libraries. In order to build and run this project, you will need to download and install these libraries.
 
 MySQL C++ Connector
-To download the MySQL C++ Connector, go to this link. Follow the instructions on the page to download and install the library.
+To download the MySQL C++ Connector, go to https://dev.mysql.com/downloads/connector/cpp/. Follow the instructions on the page to download and install the library.
 
 wkhtmltopdf
-To download wkhtmltopdf, go to this link. Follow the instructions on the page to download and install the library.
+To download wkhtmltopdf, go to https://wkhtmltopdf.org/downloads.html. Follow the instructions on the page to download and install the library.
 
 Once you have downloaded and installed the necessary libraries, you will need to include them in your project. In Visual Studio, go to the "Project" menu and select "Properties". Under "Configuration Properties", select "Linker" and then "Input". In the "Additional Dependencies" field, add the path to the .lib files for the MySQL C++ Connector and wkhtmltopdf libraries.
